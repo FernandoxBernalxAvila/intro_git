@@ -22,6 +22,8 @@ int enteroArreglo[C_5];
 int sumaTotal, i, promedio;
 
 void mostrar();
+void datosPersonaje();
+
 
 void mostrar(){
     sumaTotal=C_0;
@@ -61,6 +63,35 @@ void mostrar(){
     getchar();
 }
 
+void datosPersonaje(){
+    int cantidadPersonajes;
+
+    printf("\nIngrese la cantidad de personajes a registrar: ");
+    scanf("%d", &cantidadPersonajes);
+    for (i=C_0; i<cantidadPersonajes; i++){
+        printf("\n\nRegistrar datos para el personaje.\n");
+        printf("Introduzca el nombre: ");
+        scanf("%s", personaje[i].nombre);
+        getchar();
+        printf("Ingrese el tipo de personaje: ");
+        scanf("%s", personaje[i].tipo);
+        getchar();
+        printf("Ingrese la cantidad de fuerza del personaje del 0 - 100: ");
+        scanf("%d", &personaje[i].fuerza);
+        printf("Ingrese la cantidad de salud del personaje del 0 - 100: ");
+        scanf("%d", &personaje[i].salud);
+        getchar();
+    }
+    printf("\n\nMostrar datos de o los personajes.");
+    for(i=C_0; i<cantidadPersonajes; i++){
+        printf("\n\nNombre: %s",personaje[i].nombre);
+        printf("\nTipo:   %s",personaje[i].tipo);
+        printf("\nFuerza: %d",personaje[i].fuerza);
+        printf("\nSalud:  %d",personaje[i].salud);
+    }
+    printf("\n\nPresione entrar para terminar...\n\n");
+    getchar();
+}
 
 int main (){
 
@@ -68,9 +99,10 @@ int main (){
 
     do{
         opcion=C_0;
-        printf("   * * * * ACTIVIDAD 4 * * * * \n\n");
+        printf("   **** ACTIVIDAD 4 ****\n\n");
         printf("Opciones disponibles: \n\n");
         printf("#1- Interactuar con un arreglo.\n");
+        printf("#2- Registrar personajes.\n");
         printf("#3- Salir.\n\n");
         printf("Seleccione alguna de las opciones: ");
         scanf("%d", &opcion);
@@ -82,6 +114,7 @@ int main (){
             mostrar();
             break;
         case 2:
+            datosPersonaje();
             break;
         case 3:
             //Salir.

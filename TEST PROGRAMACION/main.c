@@ -71,7 +71,6 @@ int main (){
         printf("   * * * * ACTIVIDAD 4 * * * * \n\n");
         printf("Opciones disponibles: \n\n");
         printf("#1- Interactuar con un arreglo.\n");
-        printf("#2- Registrar personajes.\n");
         printf("#3- Salir.\n\n");
         printf("Seleccione alguna de las opciones: ");
         scanf("%d", &opcion);

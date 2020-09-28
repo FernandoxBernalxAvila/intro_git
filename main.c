@@ -12,6 +12,5 @@ int main(){
     printf("Edad: ");
     scanf("%u", &edad);
     printf("Vas a cumplir %u", edad + 1);
-    
     return 0;
 }
